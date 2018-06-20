@@ -1,0 +1,49 @@
+.btn {
+  border-radius: 0.5rem;
+  min-height: 40px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.6rem;
+  &.btn-primary {
+    background: $orange;
+    border-color: $orange;
+  }
+  &.btn-secondary {
+    background: #fff;
+    border-color: $light-gray;
+    color: $black;
+  }
+  &.btn-white {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+  &.btn-primary:not(:disabled):not(.disabled):active, &.btn-primary:not(:disabled):not(.disabled).active, & .show > .btn-primary.dropdown-toggle {
+    background-color: $orange - #111;
+    border-color: $orange - #111;
+  }
+  &.btn-secondary:not(:disabled):not(.disabled):active, &.btn-secondary:not(:disabled):not(.disabled).active, & .show > .btn-secondary.dropdown-toggle {
+    background-color: #fff;
+    border-color: #fff;
+    color: $black;
+  }
+}
+.btn:focus, .btn.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($orange, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba($orange, 0.25);
+}
+.btn-primary:focus, .btn-primary.focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($orange, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba($orange, 0.5);
+}
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($light-gray, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba($light-gray, 0.5);
+}
+
+a {
+  &.btn {
+    line-height: 3rem;
+  }
+}

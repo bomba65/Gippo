@@ -1,0 +1,25 @@
+.section-our-menu {
+  padding: 7rem 0;
+
+
+  .menu-list {
+    .menu-list-item {
+      margin-top: 7.5rem;
+      text-align: center;
+
+      img {
+        width: 21rem;
+        height: 21rem;
+      }
+
+      h3 {
+        color: $brown;
+        margin-top: 2.5rem;
+      }
+      .price {
+        font-size: 2rem;
+        color: $light-gray;
+      }
+    }
+  }
+}

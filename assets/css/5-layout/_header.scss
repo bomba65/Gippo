@@ -1,0 +1,235 @@
+@mixin bgChange() {
+  .navbar {
+    background-color: $dark-gray;
+  }
+}
+
+.navbar {
+  padding : 2.5rem 0;
+  background-color: #fff;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  .container {
+    @include media-breakpoint-up(lg) {
+      max-height: 8rem;
+    }
+    overflow: inherit;
+    position: relative;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    max-height: 8rem;
+    img {
+      width: 7rem;
+      height: 8rem;
+      margin-right: 1.5rem;
+    }
+    p {
+      padding-top: 2.5rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+
+      @media only screen and (max-width: 480px) {
+        display: none;
+      }
+      span {
+        display: block;
+        font-size: 2.4rem;
+        font-weight: bold;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      img{
+        width: 5rem;
+        height: 6rem;
+      }
+      p {
+        margin: 0;
+        padding-top: 1rem;
+        font-size: 2rem;
+        span {
+          font-size: 2rem;
+          font-weight: normal;
+        }
+      }
+    }
+
+  }
+
+  .btn-basket {
+    @include media-breakpoint-up(lg) {
+      order: 1;
+      align-self: flex-start;
+      .mob {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      margin-left: auto;
+      a, p {
+        display: none;
+        &.mob {
+          border: 0;
+          height: 8rem;
+          padding: 2.5rem 1.5rem;
+          display: block;
+          font-size: 2rem;
+          background-color: #fff;
+          span {
+            font-size: 2.4rem;
+          }
+          &:hover {
+            color: $orange;
+            background-color: #f5f7fa;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+    p {
+      text-align: right;
+      margin-top: 1rem;
+    }
+  }
+
+
+  .navbar-toggler {
+    outline: none;
+
+    $animation-time: 150ms;
+
+    @mixin normal() {
+      transform-origin: center;
+      transition: 150ms;
+      .navbar-toggler-icon-line, &:after, &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 200px;
+        transition: $animation-time;
+      }
+      &:before{
+        margin-top: 2px;
+        transition: $animation-time;
+      }
+      &:after{
+        margin-bottom: 2px;
+        transition: $animation-time;
+      }
+    }
+    @mixin expanded() {
+      transform: rotate(45deg);
+      &:before {
+        transform: translateY(5px) rotate(180deg);
+      }
+      .navbar-toggler-icon-line {
+        transform: rotate(90deg) translateX(-2px);
+      }
+      &:after {
+        opacity: 0;
+      }
+    }
+    .navbar-toggler-icon {
+        @include normal();
+    }
+    &[aria-expanded=true] .navbar-toggler-icon {
+      @include expanded();
+    }
+  }
+  .navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  .collapse, .collapsing {
+    padding-left: 7rem;
+    position: relative;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      max-height: 8rem;
+    }
+    @include media-breakpoint-down(lg) {
+      padding-left: 3rem;
+    }
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      overflow-y: auto;
+    }
+
+    .menu-top {
+      order: 1;
+      line-height: 2.2rem;
+      margin-bottom: 1.5rem;
+      p {
+        margin: 0;
+      }
+      a {
+        padding: 0;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 1.5rem 0 2rem;
+        .nav-item {
+          padding: 1rem 0;
+        }
+      }
+    }
+    .menu-bottom {
+      order: 2;
+      @include media-breakpoint-down(md) {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid $light-gray;
+      }
+    }
+    .menu-login {
+      @include media-breakpoint-up(lg) {
+        top: 0;
+        right: 2rem;
+        position: absolute;
+      }
+      @include media-breakpoint-down(md) {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $light-gray;
+
+        a {
+          border: 0;
+          display: block;
+          text-align: left;
+          padding: 0.5rem 0;
+          min-height: inherit;
+          line-height: normal;
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      &[aria-expanded="true"]{
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+      &::after {
+        vertical-align: 0.125em;
+      }
+    }
+  }
+  .nav-item {
+    margin-right: 3rem;
+    @include media-breakpoint-down(lg) {
+      margin-right: 1.5rem;
+    }
+  }
+}

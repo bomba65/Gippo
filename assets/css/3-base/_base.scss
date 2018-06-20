@@ -1,0 +1,113 @@
+/* Base Styles -------------------- */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: $black;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-family: 'Calibri', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 2rem !important;
+  overflow: hidden;
+}
+
+// Clearfix
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    height: 0;
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+}
+
+// Links, href
+
+a {
+    color: #000;
+    transition: color 0.3s;
+    &:hover {
+        color: $orange;
+        text-decoration: none;
+    }
+}
+
+a.active {
+    color: $orange;
+}
+
+// HEADINGS and FONT-SIZES
+
+h1, .h1 {
+  font-size: 7.2rem;
+  @include media-breakpoint-down(lg) {
+    font-size: 5.2rem;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 3.6rem;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 2.4rem;
+  }
+  font-weight: bold;
+}
+h2, .h2 {
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+h3, .h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+h4, .h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.fs-16 {
+  font-size: 1.6rem;
+}
+.fs-20 {
+  font-size: 2rem;
+}
+.fs-24 {
+  font-size: 2.4rem;
+}
+.fs-30 {
+  font-size: 3rem;
+}
+.clr-orange {
+  color: $orange;
+}
+.clr-gray {
+  color: $light-gray;
+}
+.clr-brown {
+  color: $brown;
+}
+.clr-white {
+  color: #fff;
+}
+
+.nav-margin {
+  margin-top: 13rem;
+  @include media-breakpoint-down(md) {
+    margin-top: 8rem;
+  }
+}
+
+.Oval-4 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: 0.5rem;
+  display: inline-block;
+  background-color: #fff
+}
