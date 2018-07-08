@@ -1,0 +1,65 @@
+.section-vacancies-about {
+  .vacancies-about-list {
+    margin-top: 1.5rem;
+  }
+
+  img {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.section-company-provides {
+  .company-provides-list {
+    .company-provides-item {
+      display: flex;
+      margin-top: 4rem;
+      min-height: 10rem;
+      line-height: 1.8rem;
+      border-radius: 5px;
+      padding: 1.8rem 1.8rem;
+      background-color: #fbfbfb;
+      border: 1px solid $border-gray;
+
+      span {
+        color: $orange;
+        font-size: 4rem;
+        display: inline;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.section-vacancies-almaty {
+  .vacancy-almaty {
+    margin-top: 2rem;
+
+    p:first-child {
+      margin-bottom: 0;
+      position: relative;
+      padding-left: 3.5rem;
+
+      &:before {
+        left: 1.5rem;
+        content: '•';
+        position: absolute;
+      }
+    }
+  }
+}
+
+.section-interviewing-almaty {
+  h2 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-top: .5rem;
+
+    span {
+      padding-left: 1rem;
+    }
+  }
+}

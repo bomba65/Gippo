@@ -44,6 +44,10 @@ a.active {
     color: $orange;
 }
 
+a.underline:hover {
+  text-decoration: underline;
+}
+
 // HEADINGS and FONT-SIZES
 
 h1, .h1 {
@@ -62,26 +66,44 @@ h1, .h1 {
 h2, .h2 {
   font-size: 3.6rem;
   font-weight: bold;
+  @include media-breakpoint-down(sm) {
+    font-size: 2.4rem;
+  }
 }
 h3, .h3 {
   font-size: 2.4rem;
   font-weight: bold;
+  @include media-breakpoint-down(sm) {
+    font-size: 2rem;
+  }
 }
 h4, .h4 {
   font-size: 2rem;
   font-weight: bold;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.6rem;
+  }
 }
 .fs-16 {
   font-size: 1.6rem;
 }
 .fs-20 {
   font-size: 2rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.6rem;
+  }
 }
 .fs-24 {
   font-size: 2.4rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 2rem;
+  }
 }
 .fs-30 {
   font-size: 3rem;
+  @include media-breakpoint-down(sm) {
+    font-size: 2rem;
+  }
 }
 .clr-orange {
   color: $orange;
@@ -92,8 +114,43 @@ h4, .h4 {
 .clr-brown {
   color: $brown;
 }
+.clr-black {
+  color: #000;
+}
 .clr-white {
   color: #fff;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+.padding-70 {
+  padding: 7rem 0;
+}
+
+.padding-top-70 {
+  padding-top: 7rem;
+}
+
+.padding-bottom-70 {
+  padding-bottom: 7rem;
+}
+
+.margin-0 {
+  margin: 0;
+}
+.margin-top-1 {
+  margin-top: 1rem;
+}
+.margin-top-2 {
+  margin-top: 2rem;
+}
+.margin-top-3 {
+  margin-top: 3rem;
 }
 
 .nav-margin {
@@ -109,5 +166,20 @@ h4, .h4 {
   border-radius: 50%;
   margin: 0.5rem;
   display: inline-block;
-  background-color: #fff
+  background-color: #fff;
+}
+
+.Oval-5 {
+  color: $orange;
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  line-height: 2.3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px $orange solid;
 }

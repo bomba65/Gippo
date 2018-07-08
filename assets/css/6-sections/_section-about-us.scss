@@ -1,0 +1,13 @@
+.section-about-us {
+  .about-us-list {
+    p {
+      margin-top: 3rem;
+    }
+  }
+  img {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      margin-top: 3rem;
+    }
+  }
+}

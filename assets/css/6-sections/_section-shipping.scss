@@ -1,0 +1,20 @@
+.section-shipping {
+  .shipping-list {
+      .shipping-list-item {
+        margin-top: 4rem;
+        div {
+          display: flex;
+          border-radius: 5px;
+          padding: 3rem 2.5rem;
+          background-color: #fbfbfb;
+          border: 1px solid $border-gray;
+          span {
+            color: $orange;
+            font-size: 4rem;
+            display: inline;
+            margin-right: 2rem;
+          }
+        }
+      }
+  }
+}

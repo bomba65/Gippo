@@ -1,12 +1,25 @@
-@mixin bgChange() {
-  .navbar {
-    background-color: $dark-gray;
-  }
-}
-
 .navbar {
   padding : 2.5rem 0;
   background-color: #fff;
+  border-bottom: 1px solid $border-gray;
+
+  .dropdown-menu {
+    border-radius: 5px;
+    font-size: 16px !important;
+
+    a:active {
+      color: $black;
+      background-color: $light-gray2;
+    }
+
+    @include media-breakpoint-down(md) {
+      border: 0;
+    }
+  }
+  .dropdown-menu-right {
+    right: auto !important;
+  }
+
   @include media-breakpoint-down(md) {
     padding: 0;
   }
@@ -191,7 +204,7 @@
       @include media-breakpoint-down(md) {
         margin-top: 2rem;
         padding-top: 2rem;
-        border-top: 1px solid $light-gray;
+        border-top: 1px solid $border-gray;
       }
     }
     .menu-login {
@@ -202,7 +215,7 @@
       }
       @include media-breakpoint-down(md) {
         padding-bottom: 2rem;
-        border-bottom: 1px solid $light-gray;
+        border-bottom: 1px solid $border-gray;
 
         a {
           border: 0;

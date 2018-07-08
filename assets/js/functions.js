@@ -12,7 +12,18 @@ $( document ).ready(function() {
     nextArrow: '<span class="icomoon icon-right-arrow"></span>'
   });
 
+  $('.might-like-list').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    variableWidth: true
+  });
+
 });
+
+// Change icon in map iframe
+
+
 
 /*
 var changeBg = () => {

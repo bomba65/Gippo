@@ -4,8 +4,12 @@
   background-position: center;
   background-image: url($path-image + '/main/map.png');
 
+  padding-right: 3.5rem;
   a {
     padding-left: 3.5rem;
-    padding-right: 3.5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 6rem 0;
   }
 }

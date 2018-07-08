@@ -1,0 +1,48 @@
+.section-contacts {
+  .contacts-list {
+    .contacts-list-item {
+      margin-top: 2rem;
+      a {
+        color: $orange;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .fs-20 {
+      margin: 5rem 0 0;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.section-feedback {
+  form {
+    max-width: 68rem;
+
+    input, textarea, select {
+      padding: 1.2rem 1.5rem;
+    }
+
+    div {
+      margin-top: 2.5rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      .padding-left {
+        padding-left: 0.5rem;
+      }
+      .padding-right {
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}

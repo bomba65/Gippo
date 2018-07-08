@@ -1,5 +1,75 @@
 .section-sales {
   padding: 7rem 0;
 
-  p {}
+  .sales-list {
+    list-style: none;
+
+    li {
+
+      .sales-desc {
+        margin: 4rem 0 2rem;
+      }
+
+
+      .sales-list-container {
+        color: #fff;
+        margin: 0;
+        position: relative;
+        padding: 3rem 4rem;
+        border-radius: 0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-image: url($path-image + '/sales/bg_sale.png');
+
+        @include media-breakpoint-up(sm) {
+          max-height: 280px;
+          flex-direction: column;
+        }
+        @include media-breakpoint-down(sm) {
+          margin: 0 -3rem;
+        }
+        @include media-breakpoint-down(xs) {
+          padding: 3rem 2rem;
+        }
+
+        .sales-heading {
+          font-size: 4.2rem;
+          font-weight: bold;
+          margin-bottom: 3rem;
+          line-height: 3.2rem;
+          @include media-breakpoint-up(xl) {
+            padding-top: 5rem;
+          }
+          @include media-breakpoint-down(md) {
+            font-size: 3.2rem;
+          }
+          @include media-breakpoint-down(xs) {
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+          }
+        }
+        .sales-quantity {
+          .quantity {
+            font-size: 2rem;
+            padding: 0 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          a {
+            margin-left: 3rem;
+          }
+        }
+
+        .sales-image {
+          @include media-breakpoint-up(sm) {
+            order: 1;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
