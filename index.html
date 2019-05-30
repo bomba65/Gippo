@@ -1,290 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0.0 project">
-    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
-    <meta name="author" content="Henrik H. Boelsmand">
-    <title>Gippo</title>
-    <link rel="shortcut icon" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="This is a boilerplate for a Bootstrap 4.0.0 project">
+  <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+  <meta name="author" content="Henrik H. Boelsmand">
+  <title>Gippo</title>
+  <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- build:css -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- endbuild -->
-  </head>
+  <!-- build:css -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- endbuild -->
+</head>
 
-  <body>
-        <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-          <div class="container">
-            <a class="navbar-brand d-flex" href="#">
-              <img src="./assets/img/logo_black.png" alt="Logo">
-              <p><span>Казахстанская сеть</span> быстрого питания</p>
-            </a>
+<body>
+  <header class="header py-lg-3">
+    <nav id="nav" class="navbar navbar-change navbar-expand-lg navbar-dark bg-dark py-3">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="#"><img src="./assets/img/logo_white.png" width="50"></a>
 
-            <div class="btn-basket">
-              <a class="btn btn-primary" href="#" role="button">Моя корзина (0)</a>
-              <p>
-                <span class="clr-gray">Сумма: </span> <span class="amount">1200</span> ₸
-              </p>
-
-              <a class="mob clr-orange btn btn-primary" href="#" role="button"><span class="icomoon icon-shopping-purse-icon"></span> (2)</a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">
-                 <span class="navbar-toggler-icon-line"></span>
-              </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-              <ul class="navbar-nav mr-auto menu-bottom">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Меню
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Все</a>
-                    <a class="dropdown-item" href="#">Гамбургеры</a>
-                    <a class="dropdown-item" href="#">Хот-Дог</a>
-                    <a class="dropdown-item" href="#">Салаты</a>
-                    <a class="dropdown-item" href="#">Закуски/Снэки</a>
-                    <a class="dropdown-item" href="#">Комбо</a>
-                    <a class="dropdown-item" href="#">Напитки</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Акции</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Торговые точки</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Доставка</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Контакты</a>
-                </li>
-              </ul>
-
-              <div class="menu-login">
-                <a class="btn btn-secondary" href="#" role="button">Войти</a>
+        <a href="#" class="ml-auto mr-4 d-lg-none d-block navbar-mobile-links">
+          <img src="./assets/img/avatar.svg" />
+        </a>
+        <a href="#" class="mr-4 d-lg-none d-block navbar-mobile-links">
+          <img src="./assets/img/shopping-bag.svg" /> <span>(1)</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav navbar-nav-menu ml-auto text-uppercase d-flex align-items-center position-relative">
+            <li class="nav-item d-lg-block d-none">
+              <a class="nav-link px-4 py-2 text-white nav-link-first d-flex align-items-center">
+                <span class="hamburger white mr-2"></span>
+                МЕНЮ
+              </a>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                МЕНЮ
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Все</a>
+                <a class="dropdown-item" href="#">Бургеры</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pl-lg-4 pr-4 text-white" href="#about">АКЦИИ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pl-lg-4 pr-4 text-white" href="#services">ДОСТАВКА</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle pl-lg-4 pr-4 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">О нас</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">КОНТАКТЫ</a>
+                <a class="dropdown-item" href="#">ТОРГОВЫЕ ТОЧКИ</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle pl-lg-4 pr-4 text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Алматы</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Астана</a>
+                <a class="dropdown-item" href="#">Шымкент</a>
+              </div>
+            </li>
+            <li class="px-lg-4 phone dropdown">
+              <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">8 (701) 214 49 35</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">8 (727) 224 44 44</a>
+                <a class="dropdown-item" href="#">8 (701) 214 49 35</a>
+              </div>
+            </li>
+            <li class="pl-lg-5 auth d-lg-block d-none">
+              <button class="btn btn-outline-light mr-4 signin">ВОЙТИ</button>
+              <button class="btn btn-light basket">Моя корзина <span>(2)</span></button>
+            </li>
+            <span class="summ d-lg-block d-none">1100 &#8376;</span>
+          </ul>
+        </div>
 
-              <ul class="navbar-nav mr-auto menu-top">
-                <li class="nav-item">
-                  <p class="fs-20">Доставка по <span class="clr-orange">Алматы</span></p>
-                  <p class="clr-gray">Минимальной суммы заказа нет</p>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link fs-20" href="tel: 8 (727) 224 44 44">8 (727) 224 44 44</a>
-                  <p class="clr-gray">Cлужба доставки</p>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </nav>
-
-        <section class="section-main-slider nav-margin">
-          <div class="container">
-            <div class="main-slider">
-              <div class="main-slides row">
-                <div class="col-sm-7 col-6 my-auto">
-                  <h1>Ребятки Вкуснятки</h1>
-
-                  <p class="under-h1 fs-24">
-                    Мини гамбургеры курица <span class="Oval-4"></span> Хрустящий картофель фри
-                    <br>
-                    Сок яблочный 200 мл <span class="Oval-4"></span> Подарочная игрушка
-                  </p>
-
-                  <a class="btn btn-white" href="#" role="button">Подробнее</a>
+        <div class="nav-link-first-menu">
+          <ul class="nav nav-pills justify-content-center m-0 py-3 our-menu-list__block">
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link active mt-3 our-menu-list__subblock__active" href="#">Все</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Гамбургеры</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Хот-Дог</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Степ роллы</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Салаты</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Мини</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Детское меню</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Картофель</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Закуски/Снэки</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Комбо</a>
+            </li>
+            <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+              <img src="/assets/img/main/1.png" width="30">
+              <a class="nav-link mt-3" href="#">Напитки</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="section-main-slider" class="section-main-slider position-relative">
+    <div class="main-slider">
+      <div class="slide">
+        <video autoplay="" muted="" loop="" preload="auto">
+          <source src="../assets/videos/burgerstation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="slide" style="background-image:url(../assets/img/main/bg.png)">
+        </div>
+        <div class="slide" style="background-image:url(../assets/img/main/bg.png)">
+          <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="slide" style="background-image:url(../assets/img/main/bg.png)">
+        </div>
+        <div class="slide" style="background-image:url(../assets/img/main/bg.png)">
+        </div>
+      </div>
+      <img src="/assets/img/main/zakaz.png" width="80" class="zakaz">
+    </section>
+    <section class="our-menu-list py-5 d-md-block d-none">
+      <div class="container">
+        <h2 class="text-center mb-4">Наше меню</h2>
+        <ul class="nav nav-pills justify-content-center mb-3 our-menu-list__block">
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link active mt-3 our-menu-list__subblock__active" href="#">Все</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Гамбургеры</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Хот-Дог</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Степ роллы</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Салаты</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Мини</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Детское меню</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Картофель</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Закуски/Снэки</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Комбо</a>
+          </li>
+          <li class="nav-item py-3 px-2 text-center our-menu-list__subblock">
+            <img src="/assets/img/main/1.png" width="30">
+            <a class="nav-link mt-3" href="#">Напитки</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="our-menu-products py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 text-center py-4">
+            <div class="our-menu-products__item py-4">
+              <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
+              <h3>Гамбургер дабл говядина</h3>
+              <p>Хрустящий французский багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен</p>
+              <div class="row px-4 d-flex align-items-center our-menu-products__item__bottom">
+                <div class="col-4">
+                  <span class="fs-24 price align-middle">550 ₸</span>
                 </div>
-
-                <div class="col-sm-5 col-6">
-                  <img src="/assets/img/sales/childrens.png" alt="Slider image">
-                </div>
-              </div>
-
-              <div class="main-slides row">
-                <div class="col-sm-7 col-6 my-auto">
-                  <h1>Ребятки Вкуснятки</h1>
-
-                  <p class="under-h1 fs-24">
-                    Мини гамбургеры курица <span class="Oval-4"></span> Хрустящий картофель фри
-                    <br>
-                    Сок яблочный 200 мл <span class="Oval-4"></span> Подарочная игрушка
-                  </p>
-
-                  <a class="btn btn-white" href="#" role="button">Подробнее</a>
-                </div>
-
-                <div class="col-sm-5 col-6">
-                  <img src="/assets/img/sales/childrens.png" alt="Slider image">
-                </div>
-              </div>
-
-              <div class="main-slides row">
-                <div class="col-sm-7 col-6 my-auto">
-                  <h1>Ребятки Вкуснятки</h1>
-
-                  <p class="under-h1 fs-24">
-                    Мини гамбургеры курица <span class="Oval-4"></span> Хрустящий картофель фри
-                    <br>
-                    Сок яблочный 200 мл <span class="Oval-4"></span> Подарочная игрушка
-                  </p>
-
-                  <a class="btn btn-white" href="#" role="button">Подробнее</a>
-                </div>
-
-                <div class="col-sm-5 col-6">
-                  <img src="/assets/img/sales/childrens.png" alt="Slider image">
-                </div>
-              </div>
-
-              <div class="main-slides row">
-                <div class="col-sm-7 col-6 my-auto">
-                  <h1>Ребятки Вкуснятки</h1>
-
-                  <p class="under-h1 fs-24">
-                    Мини гамбургеры курица <span class="Oval-4"></span> Хрустящий картофель фри
-                    <br>
-                    Сок яблочный 200 мл <span class="Oval-4"></span> Подарочная игрушка
-                  </p>
-
-                  <a class="btn btn-white" href="#" role="button">Подробнее</a>
-                </div>
-
-                <div class="col-sm-5 col-6">
-                  <img src="/assets/img/sales/childrens.png" alt="Slider image">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section-our-menu">
-          <div class="container">
-            <h2 class="text-center">Наше меню</h2>
-
-            <div class="menu-list row">
-              <div class="menu-list-item active col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price fs-20 clr-gray">550 ₸</p>
+                <div class="col-6 position-relative">
+                  <div class="order-buttons-pm">
+                    <button class="btn btn-pm orange order-minus" type="button" name="button">
+                      <span class="icomoon icon-minus"></span>
+                    </button>
+                    <span class="quantity fs-20 align-middle px-3">1</span>
+                    <button class="btn btn-pm orange" type="button" name="button">
+                      <span class="icomoon icon-plus"></span>
+                    </button>
                   </div>
-                </a>
-
-                <div class="menu-list-item-info d-md-block d-none">
-                  <div class="row">
-                    <div class="col-6">
-                      <h2 class="clr-brown">Гамбургер дабл говядина</h2>
-                      <p class="fs-20 clr-brown">Хрустящий французcкий багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен кетчупом и горчичными соусом.</p>
-                    </div>
-                    <div class="col-6 text-center">
-                      <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                      <div>
-                        <span class="fs-24 price align-middle">550 ₸</span>
-                        <button class="btn btn-pm orange" type="button" name="button">
-                          <span class="icomoon icon-minus"></span>
-                        </button>
-                        <span class="quantity fs-20 align-middle">1</span>
-                        <button class="btn btn-pm orange" type="button" name="button">
-                          <span class="icomoon icon-plus"></span>
-                        </button>
-
-                        <button class="btn btn-orange" type="button" name="button">В корзину</button>
-                      </div>
-                    </div>
-                    <div class="triangle">
-
-                    </div>
-                    <span class="icomoon icon-cancel"></span>
+                  <div class="order-button active">
+                    <button class="btn btn-orange btn-add-basket" type="button" name="button">Заказать</button>
                   </div>
                 </div>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img class="rounded-circle" src="/assets/img/products/53426_73607_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Хот-Дог Z7 куриный</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
-
-                <div class="menu-list-item-info">
-                  <div class="row">
-                    <div class="col-6">
-                      <h2 class="clr-brown">Гамбургер дабл говядина</h2>
-                      <p class="fs-20 clr-brown">Хрустящий французcкий багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен кетчупом и горчичными соусом.</p>
-                    </div>
-                    <div class="col-4">
-                      <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
-              </div>
-              <div class="menu-list-item col-md-4 col-sm-6 col-12">
-                <a href="#">
-                  <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
-                  <div class="align-middle d-sm-block d-inline-block">
-                    <h3>Гамбургер дабл говядина</h3>
-                    <p class="price">550 ₸</p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
-        </section>
-
-        <section class="section-main-map text-center">
-          <p class="fs-30 clr-brown">Где ближайший Gippo?</p>
-          <a class="btn btn-primary mx-auto" href="#" role="button">Найти павильоны Gippo рядом</a>
-        </section>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 text-center py-4">
+            <div class="our-menu-products__item py-4">
+              <img class="rounded-circle" src="/assets/img/products/53426_73607_12.png" alt="Фотография продукта">
+              <h3>Гамбургер дабл говядина</h3>
+              <p>Хрустящий французский багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен</p>
+              <div class="row px-4 d-flex align-items-center our-menu-products__item__bottom">
+                <div class="col-md-4 col-4">
+                  <span class="fs-24 price align-middle">550 ₸</span>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-minus"></span>
+                  </button>
+                  <span class="quantity fs-20 align-middle px-3">1</span>
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-plus"></span>
+                  </button>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-orange btn-add-basket" type="button" name="button">В корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 text-center py-4">
+            <div class="our-menu-products__item py-4">
+              <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
+              <h3>Гамбургер дабл говядина</h3>
+              <p>Хрустящий французский багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен</p>
+              <div class="row px-4 d-flex align-items-center our-menu-products__item__bottom">
+                <div class="col-md-4 col-4">
+                  <span class="fs-24 price align-middle">550 ₸</span>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-minus"></span>
+                  </button>
+                  <span class="quantity fs-20 align-middle px-3">1</span>
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-plus"></span>
+                  </button>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-orange btn-add-basket" type="button" name="button">В корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12 text-center py-4">
+            <div class="our-menu-products__item py-4">
+              <img src="/assets/img/products/42256_780647_12.png" alt="Фотография продукта">
+              <h3>Гамбургер дабл говядина</h3>
+              <p>Хрустящий французский багет с куриной колбаской, жаренным луком и острым перцем халапенью, приправлен</p>
+              <div class="row px-4 d-flex align-items-center our-menu-products__item__bottom">
+                <div class="col-md-4 col-4">
+                  <span class="fs-24 price align-middle">550 ₸</span>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-minus"></span>
+                  </button>
+                  <span class="quantity fs-20 align-middle px-3">1</span>
+                  <button class="btn btn-pm orange" type="button" name="button">
+                    <span class="icomoon icon-plus"></span>
+                  </button>
+                </div>
+                <div class="col-md-4 col-4">
+                  <button class="btn btn-orange btn-add-basket" type="button" name="button">В корзину</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-main-map text-center">
+      <p class="fs-30 clr-brown">Где ближайший Gippo?</p>
+      <a class="btn btn-primary mx-auto" href="#" role="button">Найти павильоны Gippo рядом</a>
+    </section>
 
     <!-- build:js -->
     <script src="assets/js/main.js"></script>
-     <!-- endbuild -->
+    <!-- endbuild -->
   </body>
 
-</html>
+  </html>

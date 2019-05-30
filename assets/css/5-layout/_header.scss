@@ -1,248 +1,139 @@
-.navbar {
-  padding : 2.5rem 0;
-  background-color: #fff;
-  border-bottom: 1px solid $border-gray;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&subset=cyrillic');
+body {
+  margin-top: 103px;
+  @include media-breakpoint-down(md) {
+    margin-top: 83px;
+  }
+}
+.header{
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  position: fixed;
+  font-size: 1.4rem;
+  background: $dark-gray;
 
-  .dropdown-menu {
-    border-radius: 5px;
-    font-size: 16px !important;
+  .navbar-mobile-links {
+    padding: 0 5px;
 
-    a:active {
-      color: $black;
-      background-color: $light-gray2;
+    img {
+      height: 30px;
     }
-
-    @include media-breakpoint-down(md) {
-      border: 0;
+    span {
+      color: #ec6e02;
+      font-size: 1.8rem;
+      vertical-align: middle;
     }
   }
-  .dropdown-menu-right {
-    right: auto !important;
+
+  .dropdown-menu {
+
+    .dropdown-item {
+      color: #000;
+      font-size: 1.6rem;
+      font-weight: normal;
+
+      &:focus, &:active, &:hover {
+        background: #f8f9fa;
+      }
+    }
   }
 
   @include media-breakpoint-down(md) {
-    padding: 0;
-  }
 
-  .container {
-    @include media-breakpoint-up(lg) {
-      max-height: 8rem;
+    .nav-link-first-menu {
+      display: none;
     }
+
+    .dropdown-menu {
+      border: 0;
+      color: #fff;
+      font-size: 1.4rem; 
+      background: $dark-gray;
+
+      .dropdown-item {
+        color: #F7AB46;
+      }
+    }
+  }
+  .nav-link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    @include media-breakpoint-down(md) {
+      color: #F7AB46 !important;
+    }
+  }
+  .phone{
+    @include media-breakpoint-down(md) {
+      margin-bottom: 1rem;
+    }  
+    a{
+      font-family: 'Calibri';
+      font-weight: 600;
+      color: #fff;
+      font-size: 16px;
+      @include media-breakpoint-down(md) {
+        color: #F7AB46;
+      }
+    }
+  }
+  .signin{
+    font-family: 'Montserrat', sans-serif;
+    @include media-breakpoint-down(md) {
+      color: #F7AB46;
+      border-color: #F7AB46;
+    }
+  }
+  .basket{
+    font-family: 'Calibri';
+    color: #fff;
+    background: #F7AB46;
+    border-color: #F7AB46;
+  }
+  .container{
     overflow: inherit;
-    position: relative;
   }
-
-  .navbar-brand {
-    padding: 0;
-    max-height: 8rem;
-    img {
-      width: 7rem;
-      height: 8rem;
-      margin-right: 1.5rem;
-    }
-    p {
-      padding-top: 2.5rem;
-      font-size: 1.6rem;
-      line-height: 2.4rem;
-
-      @media only screen and (max-width: 480px) {
-        display: none;
-      }
-      span {
-        display: block;
-        font-size: 2.4rem;
-        font-weight: bold;
-      }
-    }
+}
+.navbar-change{
+  background: transparent !important;
+}
+.navbar-toggler{
+  @include media-breakpoint-down(md) {
+    background-color: orange;
+    border-color: orange;
+  }
+}
+.navbar-nav-menu{
+  @include media-breakpoint-down(md) {
+    padding: 2rem 0;
+    align-items: initial !important;
+  }
+  .nav-item{
     @include media-breakpoint-down(md) {
-      img{
-        width: 5rem;
-        height: 6rem;
-      }
-      p {
-        margin: 0;
-        padding-top: 1rem;
-        font-size: 2rem;
-        span {
-          font-size: 2rem;
-          font-weight: normal;
-        }
-      }
-    }
-
-  }
-
-  .btn-basket {
-    @include media-breakpoint-up(lg) {
-      order: 1;
-      align-self: flex-start;
-      .mob {
-        display: none;
-      }
-    }
-    @include media-breakpoint-down(md) {
-      margin-left: auto;
-      a, p {
-        display: none;
-        &.mob {
-          border: 0;
-          height: 8rem;
-          padding: 2.5rem 1.5rem;
-          display: block;
-          font-size: 2rem;
-          background-color: #fff;
-          span {
-            font-size: 2.4rem;
-          }
-          &:hover {
-            color: $orange;
-            background-color: #f5f7fa;
-            border-radius: 0;
-          }
-        }
-      }
-    }
-    p {
-      text-align: right;
-      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
-
-
-  .navbar-toggler {
-    outline: none;
-
-    $animation-time: 150ms;
-
-    @mixin normal() {
-      transform-origin: center;
-      transition: 150ms;
-      .navbar-toggler-icon-line, &:after, &:before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: #000;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        border-radius: 200px;
-        transition: $animation-time;
-      }
-      &:before{
-        margin-top: 2px;
-        transition: $animation-time;
-      }
-      &:after{
-        margin-bottom: 2px;
-        transition: $animation-time;
-      }
-    }
-    @mixin expanded() {
-      transform: rotate(45deg);
-      &:before {
-        transform: translateY(5px) rotate(180deg);
-      }
-      .navbar-toggler-icon-line {
-        transform: rotate(90deg) translateX(-2px);
-      }
-      &:after {
-        opacity: 0;
-      }
-    }
-    .navbar-toggler-icon {
-        @include normal();
-    }
-    &[aria-expanded=true] .navbar-toggler-icon {
-      @include expanded();
-    }
-  }
-  .navbar-toggler-icon {
-    width: 20px;
-    height: 20px;
+}
+.summ{
+  position: absolute;
+  bottom: -25px;
+  right: 30px;
+  color: #fff;
+  @include media-breakpoint-down(md) {
+    color: #000;
     position: relative;
+    right: 0;
+    bottom: -10px;
   }
-
-  .collapse, .collapsing {
-    padding-left: 7rem;
-    position: relative;
-    flex-direction: column;
-
-    @include media-breakpoint-up(lg) {
-      max-height: 8rem;
-    }
-    @include media-breakpoint-down(lg) {
-      padding-left: 3rem;
-    }
-    @include media-breakpoint-down(md) {
-      padding-left: 0;
-      overflow-y: auto;
-    }
-
-    .menu-top {
-      order: 1;
-      line-height: 2.2rem;
-      margin-bottom: 1.5rem;
-      p {
-        margin: 0;
-      }
-      a {
-        padding: 0;
-      }
-      @include media-breakpoint-down(md) {
-        padding: 1.5rem 0 2rem;
-        .nav-item {
-          padding: 1rem 0;
-        }
-      }
-    }
-    .menu-bottom {
-      order: 2;
-      @include media-breakpoint-down(md) {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid $border-gray;
-      }
-    }
-    .menu-login {
-      @include media-breakpoint-up(lg) {
-        top: 0;
-        right: 2rem;
-        position: absolute;
-      }
-      @include media-breakpoint-down(md) {
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $border-gray;
-
-        a {
-          border: 0;
-          display: block;
-          text-align: left;
-          padding: 0.5rem 0;
-          min-height: inherit;
-          line-height: normal;
-        }
-      }
-    }
-
-    .dropdown-toggle {
-      &[aria-expanded="true"]{
-        &::after {
-          transform: rotate(180deg);
-        }
-      }
-      &::after {
-        vertical-align: 0.125em;
-      }
-    }
+}
+.nav-link-first{
+  min-height: inherit;
+  &:hover{
+    background: transparent;
   }
-  .nav-item {
-    margin-right: 3rem;
-    @include media-breakpoint-down(lg) {
-      margin-right: 1.5rem;
-    }
+  @include media-breakpoint-down(md) {
+    border-color: #F7AB46;
+    display: inline-block;
   }
 }

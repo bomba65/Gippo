@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\e91d";
+}
 .icon-arrow-drop-down:before {
   content: "\e900";
 }
